@@ -56,7 +56,7 @@ module.exports = {
         },
         {
           method: 'GET',
-          path: '/rule/all',
+          path: '/rules/all',
           handler: async (req, res) => {
             return ruleLoader.all();
           }

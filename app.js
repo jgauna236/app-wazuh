@@ -3,8 +3,11 @@ const Hapi = require('hapi');
 const routes = require("./routes");
 const fileLoader = require('./file-loader')
 const server = Hapi.server({
-  port: 3000,
+  port: 8000,
   host: 'localhost',
+  routes: {
+    cors: true
+  },
   app: {
     ROOT_DIR : path.dirname(require.main.filename),
     JSON_FILE_DIR : path.dirname(require.main.filename)+ "/resources/alerts.json",
